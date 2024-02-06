@@ -1,0 +1,342 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: Muller;
+    src: url("./assets/fonts/MullerRegular.otf");
+  }
+  @font-face {
+    font-family: Mullerbold;
+    src: url("./assets/fonts/MullerBold.otf");
+  }
+  @font-face {
+    font-family: MullerExtraBold;
+    src: url("./assets/fonts/MullerExtraBold.otf");
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  body {
+    font-family: Muller, sans-serif;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .button {
+    background-color: rgb(255, 175, 24);
+    width: 224px;
+    height: 60px;
+    cursor: pointer;
+    border: 0;
+    padding: 22px;
+    font-family: 'Mullerbold';
+    font-size: 16px;
+    color: rgb(56, 36, 0);
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .button.btn-white {
+    background: transparent;
+    border: 1px solid rgb(255,175,24);
+    color: rgb(255,175,24);
+  }
+
+.main {
+  margin: 132px 0  81px;
+}
+.main-info {
+max-width: 622px;
+}
+.main .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-info-title {
+  font-size: 45px;
+  font-family: "MullerExtraBold";
+  line-height: 1.222;
+  margin-bottom: 13px;
+}
+
+.add-color {
+  color: rgb(185, 145, 80);
+}
+.add-color span {
+  color: #ffaf18;
+}
+
+.main-advantages {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.advantage {
+  max-width: 306px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 47px;
+}
+.advantages-content {
+  margin-left: 16px;
+}
+.advantage-title {
+  font-size: 16px;
+  font-family: "Mullerbold";
+  color: rgb(255, 175, 24);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.advantage-text {
+  font-size: 16px;
+  color: rgb(185, 145, 80);
+}
+
+.products {
+  padding: 80px 0 120px ;
+}
+.products-title {
+  font-size: 35px;
+  font-family: "Mullerbold";
+  color: rgb(189, 152, 92);
+  line-height: 1.571;
+  text-align: center;
+  margin-bottom: 35px;
+}
+.products-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between ;
+
+}
+
+.order {
+  padding: 120px 0 115px;
+  overflow: hidden;
+}
+.order .container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.order-content {
+  max-width: 384px;
+}
+.order-content h2 {
+  font-size: 35px;
+  font-family: "MullerExtraBold";
+  line-height: 1.286;
+  margin-bottom: 65px;
+}
+.order-content-text {
+  font-size: 16px;
+  color: rgb(185, 145, 80);
+  line-height: 1.5;
+}
+
+.order-form {
+  margin-left: 127px;
+  max-width: 320px;
+}
+
+.order-form input {
+  padding: 23px 22px 24px;
+  width: 328px;
+  height: 60px;
+  color: rgb(103, 82, 45);
+  border: 1px solid rgb(185, 145, 80);
+  font-size: 18px;
+  outline: none;
+  margin-bottom: 24px;
+}
+.order-form input::placeholder {
+  color: rgb(203, 168, 110);
+}
+.order-form .button {
+  width: 328px;
+  height: 60px;
+}
+.order-image {
+  width: 282px;
+  position: relative;
+}
+.order-image img {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+}
+
+.border-color {
+  border: 1px solid red;
+}
+.loader-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.49);
+}
+.loader {
+  border: 15px solid #f3f3f3;
+  border-top: 15px solid #ffaf18;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin  {
+    0% { transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+/* 1024px -1229*/
+
+@media screen and (max-width: 1229px){
+
+  .main-image {
+      width: 400px;
+  }
+  .main-image img {
+      max-width: 100%;
+  }
+  .products-items {
+      justify-content: center;
+  }
+
+  .order .container {
+      max-width: 1024px;
+  }
+  .order-form {
+      margin-left: 48px;
+  }
+}
+/* 768 -1023*/
+
+@media screen and (max-width: 1023px){
+
+  .main .container {
+      flex-direction: column;
+  }
+  .main-image {
+      order: 1;
+  }
+  .main-info {
+      order: 2;
+  }
+  .main {
+      margin-top: 70px;
+  }
+  .products {
+      padding-top: 0;
+      padding-bottom: 40px;
+  }
+  .order {
+      position: relative;
+  }
+  .order .container {
+      justify-content: center;
+  }
+  .order-image {
+      position: absolute;
+      z-index: -1;
+      right: calc(50% - 400px);
+  }
+  .order-image img {
+      position: relative;
+  }
+}
+/* 425 -767*/
+@media screen and (max-width: 767px){
+  .cart {
+      margin-left: 20px;
+  }
+  .main-info-title {
+      line-height: 45px;
+      text-align: center;
+  }
+  .main-advantages {
+      margin-right: auto;
+      margin-left: auto;
+  }
+  .main-actions {
+      text-align: center;
+  }
+  .order .container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .order-form {
+      margin-left: 0;
+      flex-basis: 100%;
+  }
+  .order-content h2 {
+      text-align: center;
+      margin-bottom: 30px;
+  }
+  .order-content-text {
+      text-align: center;
+      margin-bottom: 25px;
+  }
+}
+
+
+
+@media screen and (max-width: 656px){
+  .main-advantages {
+      max-width: 306px;
+  }
+}
+/* 375 -424*/
+@media screen and (max-width: 424px){
+
+  .main-image {
+      width: 100%;
+  }
+
+}
+/* 320 -374*/
+@media screen and (max-width: 374px){
+  .main-info-title {
+      font-size: 38px ;
+  }
+  .order-form input {
+      width: 290px;
+  }
+  .order-form .button {
+      width: 290px;
+  }
+  .footer-text {
+      margin-left: 20px;
+  }
+
+}
+
+  @media screen and (max-width: 1229px){
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+  }
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
