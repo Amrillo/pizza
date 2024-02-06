@@ -15,7 +15,7 @@ import { environment } from 'src/environments/environment';
 export class MainComponent implements OnInit , AfterViewInit {
 
 
-  
+
 
   // private observable: Observable<number>
   private subscription: Subscription | null = null ;
@@ -62,7 +62,7 @@ export class MainComponent implements OnInit , AfterViewInit {
     private popupComponent!: PopupComponent ;
 
     ngAfterViewInit(): void {
-      this.popupComponent.open();
+      // this.popupComponent.open();
     }
     test() {
 
